@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@themepixels">
+  <meta name="twitter:creator" content="@themepixels">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bracket">
+  <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="twitter:image" content="http://themepixels.me/bracket/img/bracket-social.png">
+
+  <!-- Facebook -->
+  <meta property="og:url" content="http://themepixels.me/bracket">
+  <meta property="og:title" content="Bracket">
+  <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+
+  <meta property="og:image" content="http://themepixels.me/bracket/img/bracket-social.png">
+  <meta property="og:image:secure_url" content="http://themepixels.me/bracket/img/bracket-social.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+
+  <!-- Meta -->
+  <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="author" content="ThemePixels">
+
+  <title>Mobile Shopee</title>
+
+  <!-- vendor css -->
+  
+
+  <link href={% static "lib/font-awesome/css/font-awesome.css" %} rel="stylesheet">
+  <link href={% static 'lib/Ionicons/css/ionicons.css' %} rel="stylesheet">
+  <link href={% static 'lib/perfect-scrollbar/css/perfect-scrollbar.css' %} rel="stylesheet">
+  <link href={% static 'lib/jquery-switchbutton/jquery.switchButton.css' %} rel="stylesheet">
+  <!-- Bracket CSS -->
+  <link rel="stylesheet" href={% static 'css/bracket.css' %}>
+  <link href={ % static 'lib/datatables/jquery.dataTables.css %} rel="stylesheet">
+  <style>
+    @media only screen and (max-width: 714px) {
+     /* For mobile phones: */
+        [class*="col-"] {
+        width: 100%;
+      }
+      .pl{ margin-left: 15px;
+            }
+      .p{
+           padding-left: 0px;
+          
+
+      }      
+      .p1{
+        padding-right: 4px;
+        
+      }
+    }
+
+
+    @media (min-width: 300px) {
+      .crk {
+        height: 140vh;
+        overflow-y: auto;
+      }
+    }
+
+    @media (min-width: 700px) {
+      .crk {
+        height: 100vh;
+
+      }
+    }
+
+
+    @media (min-width: 500px) {
+      .crk1 {
+        height: 78vh;
+
+      }
+    }
+
+    @media (min-width: 700px) {
+      .crk1 {
+        height: 73vh;
+        margin-left: 55px;
+        margin-top: -45px;
+
+
+
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .crk {
+        height: 110vh;
+        overflow-y: auto;
+      }
+    }
+
+    .frame {
+      overflow-x: auto;
+      line-height: 1em;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+
+
+    .frame::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    .frame::-webkit-scrollbar:vertical {
+      width: 10px;
+    }
+
+    .frame::-webkit-scrollbar:horizontal {
+      height: 20px;
+    }
+
+    .frame::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 2px solid white;
+      /* should match background, can't be transparent */
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .custom-file-control {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 0;
+      height: 32px;
+      padding: 0.5rem 1rem;
+      line-height: 0.8;
+      color: #495057;
+      pointer-events: none;
+      user-select: none;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 3px;
+
+    }
+
+    .custom-file-control:lang(en):empty::after {
+
+      content: "Choose file...";
+    }
+
+    .custom-file-control::before {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      z-index: 6;
+      display: block;
+      height: 32px;
+      padding: 0.5rem 1rem;
+      line-height: 0.8;
+      color: #495057;
+      background-color: #e9ecef;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0 3px 3px 0;
+    }
+
+    .custom-file-control:lang(en)::before {
+      content: "Browse";
+
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- ########## START: LEFT PANEL ########## -->
+  <div class="br-logo"><a href=""><span></span>Logo<span></span></a></div>
+  <div class="br-sideleft overflow-y-auto">
+    <label class="sidebar-label pd-x-15 mg-t-20">Navigation</label>
+    <div class="br-sideleft-menu">
+    
+
+      <script type="text/javascript">
+        myVar = "{{phrase_id}}";
+     </script>
+
+<a href="#" class="br-menu-link ">
+<div class="br-menu-item">
+    <i class="fa fa-mobile tx-20"></i>
+    &nbsp;&nbsp;<span class="menu-item-label">All Products</span>
+</div><!-- menu-item -->
+</a><!-- br-menu-link -->
+
+<a href="/add_products" class="br-menu-link ">
+<div class="br-menu-item">
+  <i class="fa fa-plus tx-20" aria-hidden="true"></i>
+    &nbsp;&nbsp;<span class="menu-item-label">Add Products</span>
+</div><!-- menu-item -->
+</a><!-- br-menu-link -->
+
+<a href="/update_products" class="br-menu-link active">
+<div class="br-menu-item">
+  <i class="fa fa-pencil tx-20" aria-hidden="true"></i>
+    &nbsp;&nbsp;<span class="menu-item-label">Update Products</span>
+</div><!-- menu-item -->
+</a><!-- br-menu-link -->
+
+<a href="/delete_products" class="br-menu-link">
+  <div class="br-menu-item">
+      <i class="menu-item-icon fa fa-trash-o tx-20"></i>
+      &nbsp;&nbsp;<span class="menu-item-label">Delete Products</span>
+  </div><!-- menu-item -->
+</a><!-- br-menu-link -->
+
+
+<a href="#" class="br-menu-link">
+  <div class="br-menu-item">
+    <i class="fa fa-user tx-20" aria-hidden="true"></i>
+      &nbsp;&nbsp;<span class="menu-item-label">Profile</span>
+  </div><!-- menu-item -->
+  </a><!-- br-menu-link -->
+
+
+
+
+  
+  </div><!-- br-sideleft -->
+  </div>
+  <!-- ########## END: LEFT PANEL ########## -->
+
+  <!-- ########## START: HEAD PANEL ########## -->
+  <div class="br-header">
+    <div class="br-header-left">
+      <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a>
+      </div>
+      <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i
+            class="icon ion-navicon-round"></i></a></div>
+
+    </div><!-- br-header-left -->
+    <div class="br-header-right">
+
+      <div class="dropdown">
+        <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+          <span class="logged-name hidden-md-down" id="user"></span>
+          <img src={% static  "log_in.png" %} class="wd-32 rounded-circle" alt="">
+          <span class="square-10 bg-success"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-header wd-200">
+          <ul class="list-unstyled user-profile-nav">
+
+
+            <li><a href="#" onclick="login()"><i class="icon ion-power"></i> Sign Out</a></li>
+            <script>
+              function login() {
+
+
+
+                location.href ="http://"+document.domain+":"+"80";
+
+
+              }   
+            </script>
+          </ul>
+        </div><!-- dropdown-menu -->
+      </div><!-- dropdown -->
+
+
+
+    </div><!-- br-header-right -->
+  </div><!-- br-header -->
+  <!-- ########## END: HEAD PANEL ########## -->
+
+
+  <!-- ########## START: MAIN PANEL ########## -->
+  <div class="br-mainpanel" style="height:700px;">
+    <div class="br-pageheader pd-y-1 pd-l-20">
+    </div><!-- br-pageheader -->
+    <div class="br-pagebody">
+      <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="card col-10 col-md-12 col-lg-12 bg-white  bd bd-dark crk">
+          <div class="pt-3 tx-gray-800 tx-bold">
+            <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10"> UPDATE PRODUCTS </h6>
+          </div>
+        
+         
+          <!--frame-->
+          <divbr->Please scroll to view the entire table on smaller screens
+          </divbr->
+
+        </div>
+        <div class="col-1">
+        </div>
+      </div>
+    </div>
+  </div><!-- br-pagebody -->
+  <!-- br-mainpanel -->
+
+
+  <script src={% static 'lib/jquery/jquery.js' %}></script>
+  <script src={% static 'lib/popper.js/popper.js' %}></script>
+  <script src={% static 'lib/bootstrap/bootstrap.js' %}></script>
+  <script src={% static 'lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js' %}></script>
+  <script src={% static 'lib/moment/moment.js' %}></script>
+  <script src={% static 'lib/jquery-ui/jquery-ui.js' %}></script>
+  <script src={% static 'lib/jquery-switchbutton/jquery.switchButton.js' %}></script>
+  <script src={% static 'js/bracket.js' %}></script>
+  <script src={% static 'lib/datatables/jquery.dataTables.js' %}></script>
+  <script src={% static 'lib/datatables-responsive/dataTables.responsive.js' %}></script>
+</body>
+
+</html>

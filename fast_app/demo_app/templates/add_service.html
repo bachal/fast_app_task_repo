@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@themepixels">
+  <meta name="twitter:creator" content="@themepixels">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bracket">
+  <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="twitter:image" content="http://themepixels.me/bracket/img/bracket-social.png">
+
+  <!-- Facebook -->
+  <meta property="og:url" content="http://themepixels.me/bracket">
+  <meta property="og:title" content="Bracket">
+  <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+
+  <meta property="og:image" content="http://themepixels.me/bracket/img/bracket-social.png">
+  <meta property="og:image:secure_url" content="http://themepixels.me/bracket/img/bracket-social.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+
+  <!-- Meta -->
+  <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="author" content="ThemePixels">
+
+  <title>Service provider</title>
+
+  <!-- vendor css -->
+  
+
+  <link href={% static "lib/font-awesome/css/font-awesome.css" %} rel="stylesheet">
+  <link href={% static 'lib/Ionicons/css/ionicons.css' %} rel="stylesheet">
+  <link href={% static 'lib/perfect-scrollbar/css/perfect-scrollbar.css' %} rel="stylesheet">
+  <link href={% static 'lib/jquery-switchbutton/jquery.switchButton.css' %} rel="stylesheet">
+  <!-- Bracket CSS -->
+  <link rel="stylesheet" href={% static 'css/bracket.css' %}>
+  <link href={ % static 'lib/datatables/jquery.dataTables.css %} rel="stylesheet">
+  <style>
+    @media only screen and (max-width: 714px) {
+     /* For mobile phones: */
+        [class*="col-"] {
+        width: 100%;
+      }
+      .pl{ margin-left: 15px;
+            }
+      .p{
+           padding-left: 0px;
+          
+
+      }      
+      .p1{
+        padding-right: 4px;
+        
+      }
+    }
+
+
+    @media (min-width: 300px) {
+      .crk {
+        height: 140vh;
+        overflow-y: auto;
+      }
+    }
+
+    @media (min-width: 700px) {
+      .crk {
+        height: 100vh;
+
+      }
+    }
+
+
+    @media (min-width: 500px) {
+      .crk1 {
+        height: 78vh;
+
+      }
+    }
+
+    @media (min-width: 700px) {
+      .crk1 {
+        height: 73vh;
+        margin-left: 55px;
+        margin-top: -45px;
+
+
+
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .crk {
+        height: 110vh;
+        overflow-y: auto;
+      }
+    }
+
+    .frame {
+      overflow-x: auto;
+      line-height: 1em;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+
+
+    .frame::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    .frame::-webkit-scrollbar:vertical {
+      width: 10px;
+    }
+
+    .frame::-webkit-scrollbar:horizontal {
+      height: 20px;
+    }
+
+    .frame::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 2px solid white;
+      /* should match background, can't be transparent */
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .custom-file-control {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 0;
+      height: 32px;
+      padding: 0.5rem 1rem;
+      line-height: 0.8;
+      color: #495057;
+      pointer-events: none;
+      user-select: none;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 3px;
+
+    }
+
+    .custom-file-control:lang(en):empty::after {
+
+      content: "Choose file...";
+    }
+
+    .custom-file-control::before {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      z-index: 6;
+      display: block;
+      height: 32px;
+      padding: 0.5rem 1rem;
+      line-height: 0.8;
+      color: #495057;
+      background-color: #e9ecef;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0 3px 3px 0;
+    }
+
+    .custom-file-control:lang(en)::before {
+      content: "Browse";
+
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- ########## START: LEFT PANEL ########## -->
+  <div class="br-logo"><a href=""><span></span>Logo<span></span></a></div>
+  <div class="br-sideleft overflow-y-auto">
+    <label class="sidebar-label pd-x-15 mg-t-20">Navigation</label>
+    <div class="br-sideleft-menu">
+    
+
+      <script type="text/javascript">
+        myVar = "{{phrase_id}}";
+     </script>
+
+<a href="/all_products_Owner" class="br-menu-link active">
+<div class="br-menu-item">
+    <i class="fa fa-mobile tx-20"></i>
+    &nbsp;&nbsp;<span class="menu-item-label">My Services</span>
+</div><!-- menu-item -->
+</a><!-- br-menu-link -->
+
+
+
+
+  
+  </div><!-- br-sideleft -->
+  </div>
+  <!-- ########## END: LEFT PANEL ########## -->
+
+  <!-- ########## START: HEAD PANEL ########## -->
+  <div class="br-header">
+    <div class="br-header-left">
+      <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a>
+      </div>
+      <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i
+            class="icon ion-navicon-round"></i></a></div>
+
+    </div><!-- br-header-left -->
+    <div class="br-header-right">
+
+      <div class="dropdown">
+        <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+          <span class="logged-name hidden-md-down" id="user"></span>
+          <img src={% static  "log_in.png" %} class="wd-32 rounded-circle" alt="">
+          <span class="square-10 bg-success"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-header wd-200">
+          <ul class="list-unstyled user-profile-nav">
+
+
+            <li><a href="#" onclick="logout()"><i class="icon ion-power"></i> Sign Out</a></li>
+            <script>
+              function logout() {
+
+                const logout_data={"req":"logout"}
+                const URL = 'http://127.0.0.1:8000/logout/'
+                fetch(URL, {
+                     method: "POST",
+                     mode:"same-origin",
+                     body: JSON.stringify(logout_data),
+                  headers: {
+                      "Content-type": "application/json; charset=UTF-8",
+                      "Accept": "application/json",
+                      "X-CSRFToken":csrftoken 
+                    }
+                  }).then(res => res.json())
+                  .then(json => {console.log(json);
+                  if(json=="You're logged out."){
+                    to_url="http://127.0.0.1:8000/"
+                    window.location.href = to_url;
+                  }
+
+
+                  });
+
+
+
+              }   
+            </script>
+          </ul>
+        </div><!-- dropdown-menu -->
+      </div><!-- dropdown -->
+
+
+
+    </div><!-- br-header-right -->
+  </div><!-- br-header -->
+  <!-- ########## END: HEAD PANEL ########## -->
+
+
+  <!-- ########## START: MAIN PANEL ########## -->
+  <div class="br-mainpanel" style="height:700px;">
+    <div class="br-pageheader pd-y-1 pd-l-20">
+    </div><!-- br-pageheader -->
+    <div class="br-pagebody">
+      <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="card col-10 col-md-12 col-lg-12 bg-white  bd bd-dark crk">
+          <div class="pt-3 tx-gray-800 tx-bold">
+            <div class="row">
+              <div class="d-flex justify-align-left col-8 col-md-10 col-lg-10">
+                 <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10"> MY SERVICES </h6>
+              </div>
+              <div class="d-flex justify-align-end col-2 col-md-2 col-lg-2">
+                 <a href="" class="btn btn-primary btn-sm pd-y-5 " data-toggle="modal" data-target="#modaldemo2">ADD SERVICE</a>
+              </div>
+                </div>
+          </div>
+          <div class='frame mg-t-10'>
+            <div class="table-wrapper">
+              <table id="datatable2" class="table display responsive nowrap tx-dark tx-center">
+                <thead class='thead-colored thead-dark'>
+                  <tr>
+                   
+                    <th class="wd-10p text-center">Sr number</th>
+                    <th class="wd-20p text-center">Service</th>
+                    
+                    
+                  </tr>
+                </thead>
+                <tbody id="table_fill">
+                  <!----------------------first row-------------------------->
+
+                </tbody>
+              </table>
+            </div><!-- table-wrapper -->
+
+
+          </div>
+         
+          <!--frame-->
+          <divbr->Please scroll to view the entire table on smaller screens
+          </divbr->
+
+        </div>
+        <div class="col-1">
+        </div>
+      </div>
+    </div>
+  </div><!-- br-pagebody -->
+  <!-- br-mainpanel -->
+
+  <div id="modaldemo2" class="modal fade">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content bd-0 bg-transparent rounded overflow-hidden">
+        <div class="modal-body pd-0">
+          <div class="row no-gutters">
+            <div class="col-lg-6 bg-primary wd-1000">
+              <div class="pd-40">
+                  <center>
+<img src={% static 'signup.jpg' %} height="90%" width="90%"></img>
+  </center>
+  
+
+                </div>
+              </div><!-- col-6 -->
+              <div class="col-lg-6 bg-white">
+                <div class="pd-30">
+                  <button type="button" class="close  tx-50" style="margin-top:-20px;color:red;" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="pd-x-30 pd-y-10">
+                    <h3 class="tx-inverse  mg-b-5">ADD SERVICE</h3>
+                    <p class="tx-danger" id="error_msg"></p>
+                    <div class="form-group">
+                      <input type="text" id="service"  name="service" class="form-control pd-y-12" placeholder="Enter your service" autocomplete="off">
+                      <p id="un"></p>
+                    </div><!-- form-group --> 
+                    
+                    
+
+                   
+                     <a href="#" class="btn btn-primary pd-y-12 btn-block" onclick="add_service()" role="button">SUBMIT</a>
+      
+
+                    
+                  </div>
+                </div><!-- pd-20 -->
+              </div><!-- col-6 -->
+            </div><!-- row -->
+
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+
+  <script src={% static 'lib/jquery/jquery.js' %}></script>
+  <script src={% static 'lib/popper.js/popper.js' %}></script>
+  <script src={% static 'lib/bootstrap/bootstrap.js' %}></script>
+  <script src={% static 'lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js' %}></script>
+  <script src={% static 'lib/moment/moment.js' %}></script>
+  <script src={% static 'lib/jquery-ui/jquery-ui.js' %}></script>
+  <script src={% static 'lib/jquery-switchbutton/jquery.switchButton.js' %}></script>
+  <script src={% static 'js/bracket.js' %}></script>
+  <script src={% static 'lib/datatables/jquery.dataTables.js' %}></script>
+  <script src={% static 'lib/datatables-responsive/dataTables.responsive.js' %}></script>
+</body>
+<script>
+
+function add_service(){
+
+  const new_service_data={"service":document.getElementById("service").value}
+
+  console.log(new_service_data);
+  const URL = 'http://127.0.0.1:8000/add_service/'
+
+
+  fetch(URL, {
+   method: "POST",
+   mode:"same-origin",
+   body: JSON.stringify(new_service_data),
+   headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      "Accept": "application/json",
+      "X-CSRFToken":csrftoken 
+    }
+}).then(res => res.json())
+.then(json => {console.log(json)
+  $('#modaldemo2').modal('hide');
+  var given_services = json;
+  var str=""
+  
+  for(var i=0;i<given_services.length;i++){
+    str +='<tr>';
+    
+    str+='<td>'+String(i+1)+'</td><td>'+given_services[i]['service']+'</td>';
+    str+='</tr>';
+  }
+  
+  document.getElementById("table_fill").innerHTML=str;
+
+});
+}
+
+
+function readCookie(name) {
+  
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+
+var csrftoken = readCookie('csrftoken');
+
+
+
+
+var given_services;
+function my_service_req(){
+
+  const URL = 'http://127.0.0.1:8000/add_service/'
+  
+  fetch(URL, {
+   method: "GET",
+   mode:"same-origin",
+   
+   headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      "Accept": "application/json",
+      "X-CSRFToken":csrftoken 
+    }
+}).then(res => res.json())
+.then(json => {console.log(json)
+if(json=="log in first"){
+  to_url="http://127.0.0.1:8000/"
+  window.location.href = to_url;
+
+}
+else{
+  $('#modaldemo2').modal('hide');
+  var given_services = json;
+  var str=""
+  
+  for(var i=0;i<given_services.length;i++){
+    str +='<tr>';
+    
+    str+='<td>'+String(i+1)+'</td><td>'+given_services[i]['service']+'</td>';
+
+    str+='</tr>';
+  }
+  
+  document.getElementById("table_fill").innerHTML=str;
+}
+
+});
+}
+
+my_service_req();
+</script>
+</html>

@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+    <title>Login</title>
+	
+	
+	
+    <!-- vendor css -->
+    <link href={% static 'lib/font-awesome/css/font-awesome.css' %} rel="stylesheet">
+
+    <link href={% static 'lib/Ionicons/css/ionicons.css' %} rel="stylesheet">
+
+    
+    <link rel="stylesheet" href={% static 'css/bracket.css' %}> 
+  </head>
+
+  <body background={% static 'img/image1.jpg' %}  class="img-responsive">
+
+    <div class="d-flex align-items-center justify-content-center ht-100v">
+
+      <div class="login-wrapper wd-400 wd-xs-350 pd-25 pd-xs-40 bg-white rounded shadow-base">
+        <!--<div class="signin-logo tx-center tx-28 tx-bold tx-inverse"> CUSTOMER LOGO </div>-->
+        <center><img src={% static 'comp.png' %} style="height:150px; "></center>
+		<!--<center><h3 class="text-dark ">Demo Testbed Automation</h3>
+		
+		</br><h5 class="text-dark"> [Customer Logo]</h5>
+		</center>-->
+        <div class="tx-center mg-b-20 tx-success" id="signup_msg" ></div>
+       <center><p style='font-size:20px;' >Welcome Back !</p></center>
+       
+
+       
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter  Username" id="login_user" value="" >
+        </div><!-- form-group -->
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Enter Password" id="login_pwd" value=""><br>
+
+        
+        </div>
+
+        
+       
+        
+  
+  <button class="btn btn-primary btn-block" role="button" onclick="login_req();" id="login_link">Login</button>
+                 
+   
+
+  
+   
+                    
+
+  
+    
+    
+      </div><!-- login-wrapper -->
+    </div><!-- d-flex -->
+
+    
+              
+
+              
+
+
+    
+          
+    
+          
+         
+
+          
+
+                
+    <script src={% static 'lib/jquery/jquery.js' %}></script>
+    <script src={% static 'lib/popper.js/popper.js' %}></script>
+    <script src={% static 'lib/bootstrap/bootstrap.js' %}></script>
+    <script src={% static 'lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js' %}></script>
+    <script src={% static 'lib/moment/moment.js' %}></script>
+    <script src={% static 'lib/jquery-ui/jquery-ui.js' %}></script>
+    <script src={% static 'lib/jquery-switchbutton/jquery.switchButton.js' %}></script>
+    <script src={% static  'lib/peity/jquery.peity.js' %}></script>
+    <script src={% static  'lib/highlightjs/highlight.pack.js' %}></script>
+    <script src={% static 'js/bracket.js' %}></script>
+
+
+ 
+
+<script>
+
+
+
+function login_req(){
+
+  const URL = 'http://127.0.0.1:8000/login/'
+  const login_data={"username":document.getElementById("login_user").value,
+                  "password":document.getElementById("login_pwd").value,
+                  }
+  fetch(URL, {
+   method: "POST",
+   mode:"same-origin",
+   body: JSON.stringify(login_data),
+   headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      "Accept": "application/json",
+      "X-CSRFToken":csrftoken 
+    }
+}).then(res => res.json())
+.then(json => {console.log(json)
+  if(json.status=="HTTP_201_CREATED"){
+    to_url="http://127.0.0.1:8000/"+json.target_url
+
+    //to_url="http://127.0.0.1:8000/login_success/"+json.role
+
+window.location.href = to_url;
+}
+else{
+  alert("plz fill correct information")
+}
+
+});
+
+
+  
+
+
+
+
+}
+
+
+function readCookie(name) {
+  
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+var csrftoken = readCookie('csrftoken');
+console.log(csrftoken);
+  </script>
+
+</body>
+</html>
